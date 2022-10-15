@@ -1,23 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 :root {
     --bg-color: #000000;
-    --primary-color: #C490E4;
-    --btn-color: #7A4495;
+    --primary-color: #c490e4;
+    --btn-color: #7a4495;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Lato', sans-serif;
+body {
+    font-family: "Lato", sans-serif;
 }
-.hidden{display: none}
 
-.container{
+.slide {
+    bottom: 20% !important;
+}
+
+.container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -26,68 +29,69 @@ body{
     flex-direction: column;
     gap: 2rem;
     background-color: var(--bg-color);
+    position: relative;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 20%;
-    height: 30vh;
-    background-color: #C490E4;
+    width: clamp(350px, 20%, 600px);
+    background-color: #c490e4;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
+    z-index: 1;
 }
 
-.content h1{
+.content h1 {
     font-size: 2rem;
     font-weight: 700;
-    color: #7A4495;
+    color: #7a4495;
     padding-bottom: 1.25rem;
 }
 
-.form{
+.form {
     display: flex;
     flex-direction: column;
+    width: 95%;
 }
 
-form label{
+form label {
     font-size: 1rem;
-    color: #ffffff
+    color: #ffffff;
 }
 
-form input{
+form input {
     width: 100%;
-    padding: .6875rem;
+    padding: 0.6875rem;
     margin: 8px 0;
     border-radius: 4px;
     border: none;
     background-color: #ddc2ed;
-
 }
 
-form input:focus{
+form input:focus {
     outline: none;
-    padding: .5625rem;
+    padding: 0.5625rem;
     border: 2px solid var(--btn-color);
     background-color: #ddc2ed;
 }
 
-form input::placeholder{
+form input::placeholder {
     color: #cbcbcb;
     font-size: 1rem;
 }
 
-.search{
+.search {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
 }
 
-#btn-search{
-    padding: .5rem 1.25rem;
+#btn-search {
+    padding: 0.75rem 1.5rem;
     background-color: var(--btn-color);
     border-radius: 4px;
     border: none;
@@ -96,16 +100,30 @@ form input::placeholder{
     font-weight: 400;
 }
 
-.content-localidade{
+.content-localidade {
     text-align: center;
-    width: 20%;
-    height: 8vh;
-    background-color: #C490E4;
+    width: clamp(350px, 20%, 600px);
+    background-color: #c490e4;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.5rem;
+    position: absolute;
+    bottom: 35%;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
 }
 
-.content-localidade p{
+.content-localidade p {
     color: #ffffff;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.content-container {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
 }
