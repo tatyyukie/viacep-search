@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API CEP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" async></script>
+</head>
+<body>
+    <main class="container">
+        <div class="content">
+            <h1>VIACEP API</h1>
+            <div class="form">
+                <form onsubmit="event.preventDefault();">
+                    <label for="cep">Insira o CEP</label>
+                    <input type="text" name="cep" placeholder="00000-000" id="cep">
+                    <div class="search">
+                        <button id="btn-search">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="content-localidade hidden">
+            <p id="cidade"></p>
+        </div>
+    </main>
+</body>
+</html>
